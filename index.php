@@ -1,12 +1,13 @@
     
     <?php
       $title = "Index";
-      require_once 'includes/header.php'; 
+      require_once 'includes/header.php';
+      require_once 'db/conn.php';
     ?>
 
       <h1 class="text-center">Registration for CTF</h1>
 
-      <form method="get" action="success.php">
+      <form method="post" action="success.php">
         <div class="form-group">
           <label for="firstname">First Name</label>
           <input type="text" class="form-control" id="firstname" name="firstname">
@@ -21,7 +22,7 @@
         </div>
         <div class="form-group">
           <label for="speciality">Area of Expertise</label>
-          <select class="form-control" id="speciality">
+          <select class="form-control" id="speciality" name="speciality">
             <option>Database Admin</option>
             <option>Software Developer</option>
             <option>Web Developer</option>
