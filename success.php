@@ -7,16 +7,20 @@
         $fname = $_POST['firstname'];
         $lname = $_POST['lastname'];
         $dob = $_POST['dob'];
-        $email = $_POST['speciality'];
-        $contact = $_POST['email'];
-        $speciality = $_POST['phone'];
+        $email = $_POST['email'];
+        $contact = $_POST['phone'];
+        $speciality = $_POST['speciality'];
 
         $isSuccess = $crud -> insert($fname, $lname, $dob, $email, $contact, $speciality);
+
+        if ($isSuccess) {
+          echo '<h1 class="text-center text-success">You Have Been Registered!</h1>';
+        } else {
+          echo '<h1 class="text-center text-danger">There was an error in processing!</h1>';
+        }
       }
     ?>
     
-      <h1 class="text-center text-success">You Have Been Registered!</h1>
-
       <!-- Using $_POST method -->
       <div class="card" style="width: max-content;">
         <div class="card-body">
@@ -27,14 +31,5 @@
           <p class="card-text">Contact Number: <?php echo $_POST['phone']; ?></p>
         </div>
       </div>
-
-      <?php 
-        // $_GET['firstname'];
-        // $_GET['lastname'];
-        // $_GET['dob'];
-        // $_GET['speciality'];
-        // $_GET['email'];
-        // $_GET['phone'];
-      ?>
 
     <?php require_once 'includes/footer.php' ?>
