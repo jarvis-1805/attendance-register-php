@@ -25,6 +25,6 @@
         echo $e -> getMessage();
         return false;
       }
-    } 
+    }
   }
 ?>
