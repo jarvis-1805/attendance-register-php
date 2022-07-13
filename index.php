@@ -40,7 +40,7 @@
           <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" name="phone">
           <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
-        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
       </form>
     
     <?php require_once 'includes/footer.php' ?>
