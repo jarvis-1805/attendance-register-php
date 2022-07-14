@@ -8,7 +8,8 @@
       $results = $crud -> getSpecialities();
 
       if (!isset($_GET['id'])) {
-        echo 'error';
+        include 'includes/errormessage.php';
+        header("Location: viewrecords.php");
       } else {
         $id = $_GET['id'];
         $attendee = $crud -> getAttendeeDetails($id);
@@ -50,7 +51,7 @@
           <input type="text" class="form-control" value="<?php echo $attendee['contactnumber'] ?>" id="phone" aria-describedby="phoneHelp" name="phone">
           <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
-        <button type="button" name="submit" class="btn btn-secondary" onclick="location.href='viewrecords.php'">Back to List</button>
+        <button type="button" name="submit" class="btn btn-info" onclick="location.href='viewrecords.php'">Back to List</button>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Save Changes</button>
         

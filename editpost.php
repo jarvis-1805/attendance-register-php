@@ -19,9 +19,9 @@
     if ( $result ) {
       header("Location: viewrecords.php");
     } else {
-      echo "error";
+      include 'includes/errormessage.php';
     }
   } else {
-    echo "error";
+    include 'includes/errormessage.php';
   }
 ?>
