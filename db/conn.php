@@ -1,8 +1,16 @@
 <?php
-  $host = '127.0.0.1';
-  $db = 'attendance_db';
-  $user = 'root';
-  $pass = '';
+  // Development Connection
+  // $host = '127.0.0.1';
+  // $db = 'attendance_db';
+  // $user = 'root';
+  // $pass = '';
+  // $charset = 'utf8mb4';
+
+  // Remote Database Connection
+  $host = 'sql6.freesqldatabase.com';
+  $db = 'sql6506488';
+  $user = 'sql6506488';
+  $pass = 'HMmYidEZkC';
   $charset = 'utf8mb4';
 
   // Data Source Name
