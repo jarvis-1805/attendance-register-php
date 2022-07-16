@@ -2,14 +2,14 @@
   // Development Connection
   $host = '127.0.0.1';
   $db = 'attendance_db';
-  $user = 'root';
+  $usernm = 'root';
   $pass = '';
   $charset = 'utf8mb4';
 
   // Remote Database Connection
   // $host = 'sql6.freesqldatabase.com';
   // $db = 'sql6506488';
-  // $user = 'sql6506488';
+  // $usernm = 'sql6506488';
   // $pass = 'HMmYidEZkC';
   // $charset = 'utf8mb4';
 
@@ -17,7 +17,7 @@
   $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
   try {
-    $pdo = new PDO( $dsn, $user, $pass );
+    $pdo = new PDO( $dsn, $usernm, $pass );
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch ( PDOException $e ) {
     throw new PDOException( $e -> getMessage() );
