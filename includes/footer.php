@@ -1,5 +1,5 @@
     
-      <div id="footer">
+      <div id="footer" class="mx-auto" style="width: fit-content; margin: 50px">
         <!-- <h4>Franklin's Fine Dining Dynamic Website with PHP</h4> -->
         Copyright &copy;<?php echo date('Y');?> <a href="https://jarvis-1805.github.io/" target="_blank">Shubhang Gupta</a>
       </div>
