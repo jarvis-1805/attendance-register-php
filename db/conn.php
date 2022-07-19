@@ -7,10 +7,10 @@
   // $charset = 'utf8mb4';
 
   // Remote Database Connection
-  $host = 'sql6.freesqldatabase.com';
-  $db = 'sql6506488';
-  $usernm = 'sql6506488';
-  $pass = 'HMmYidEZkC';
+  $host = getenv['DB_HOST'];
+  $db = getenv['DB_NAME'];
+  $usernm = getenv['DB_USERNAME'];
+  $pass = getenv['DB_PASS'];
   $charset = 'utf8mb4';
 
   // Data Source Name
