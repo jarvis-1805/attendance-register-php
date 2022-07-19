@@ -1,6 +1,9 @@
 <?php
   // This includes session file. This file contains code that starts/resumes a session.
   include_once "includes/session.php";
+  // require_once "vendor/autoload.php";
+  // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+  // $dotenv -> load();
 ?>
 <!doctype html>
 <html lang="en">
