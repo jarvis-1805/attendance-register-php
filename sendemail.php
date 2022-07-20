@@ -2,7 +2,7 @@
   class SendEmail {
     public static function SendMail ($to, $toName, $subject, $content) {
       // $api_key = $_ENV['API_KEY'];
-      $api_key = getenv['API_KEY'];
+      $api_key = getenv('API_KEY');
       $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', $api_key);
       
       $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(
