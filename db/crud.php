@@ -8,11 +8,11 @@
     }
 
     // function to insert a new record into the attendee database
-    public function insert ( $fname, $lname, $dob, $email, $contact, $speciality ) {
+    public function insert ( $fname, $lname, $dob, $email, $contact, $speciality, $avatar_path ) {
       try {
         // define sql statement to be executed
-        $sql = "INSERT INTO attendee (firstname, lastname, dateofbirth, emailaddress, contactnumber, speciality_id)
-                VALUES (:fname, :lname, :dob, :email, :contact, :speciality)";
+        $sql = "INSERT INTO attendee (firstname, lastname, dateofbirth, emailaddress, contactnumber, speciality_id, avatar_path)
+                VALUES (:fname, :lname, :dob, :email, :contact, :speciality, :avatar_path)";
         
         // prepare the sql statement to the actual values
         $stmt = $this -> db -> prepare($sql);
@@ -24,6 +24,7 @@
         $stmt -> bindparam(':email', $email);
         $stmt -> bindparam(':contact', $contact);
         $stmt -> bindparam(':speciality', $speciality);
+        $stmt -> bindparam(':avatar_path', $avatar_path);
 
         // execute statement
         $stmt -> execute();
