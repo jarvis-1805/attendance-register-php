@@ -9,7 +9,7 @@
 
       <h1 class="text-center">Registration for CTF</h1>
 
-      <form method="post" action="success.php">
+      <form method="post" enctype="multipart/form-data" action="success.php">
         <div class="form-group">
           <label for="firstname">First Name</label>
           <input required type="text" class="form-control" id="firstname" name="firstname">
@@ -40,7 +40,12 @@
           <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" name="phone">
           <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
-        <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
+        <div class="custom-file">
+          <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" value="12000">
+          <label class="custom-file-label" for="avatar">Choose Your Avatar</label>
+          <small id="avatar" class="form-text text-muted">Avatar is Optional</small>
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary btn-block" style="margin-top: 20px;">Submit</button>
       </form>
     
     <?php require_once 'includes/footer.php' ?>

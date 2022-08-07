@@ -12,7 +12,13 @@
         $contact = $_POST['phone'];
         $speciality = $_POST['speciality'];
 
-        $isSuccess = $crud -> insert($fname, $lname, $dob, $email, $contact, $speciality);
+        $orig_file = $_FILES['avatar']['tmp_name'];
+        $ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+        $target_dir = 'uploads/';
+        $destination = "$target_dir$email.$ext";
+        move_uploaded_file($orig_file, $destination);
+
+        $isSuccess = $crud -> insert($fname, $lname, $dob, $email, $contact, $speciality, $destination);
         $specialityName = $crud -> getSpecialityById($speciality);
 
         if ($isSuccess) {
@@ -25,7 +31,8 @@
     ?>
     
       <!-- Using $_POST method -->
-      <div class="card" style="width: max-content;">
+      <img src="<?php echo file_exists($destination) ? $destination : "uploads/default-avatar.jpg"; ?>" alt="avatar" class="rounded-circle" style="width: 20%; height: 20%">
+      <div class="card" style="width: max-content; margin-top: 10px;">
         <div class="card-body">
           <h5 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?></h5>
           <h6 class="card-subtitle mb-2 text-muted"><?php echo $specialityName['name']; ?></h6>
