@@ -6,7 +6,7 @@
       <br>
       <div id="footer" class="p-3 bg-primary text-white fixed-bottom">
       <p class="text-center">
-        CTF-1.0 Attendance Register Register Website<br>
+        CTF-1.0 Attendance & Registration Website<br>
         Copyright &copy; <?php echo date('Y');?> -&nbsp;&nbsp;<a href="https://jarvis-1805.github.io/" target="_blank" style="color: white;">Shubhang Gupta</a>
       </p>
       </div>
