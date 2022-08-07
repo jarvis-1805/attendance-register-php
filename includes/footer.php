@@ -1,7 +1,14 @@
     
-      <div id="footer" class="mx-auto" style="width: fit-content; margin: 50px">
-        <!-- <h4>Franklin's Fine Dining Dynamic Website with PHP</h4> -->
-        Copyright &copy;<?php echo date('Y');?> <a href="https://jarvis-1805.github.io/" target="_blank">Shubhang Gupta</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="footer" class="p-3 bg-primary text-white fixed-bottom">
+      <p class="text-center">
+        CTF-1.0 Attendance Register Register Website<br>
+        Copyright &copy; <?php echo date('Y');?> -&nbsp;&nbsp;<a href="https://jarvis-1805.github.io/" target="_blank" style="color: white;">Shubhang Gupta</a>
+      </p>
       </div>
     </div>
     
